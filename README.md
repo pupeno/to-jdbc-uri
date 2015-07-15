@@ -1,3 +1,5 @@
+[![Clojars Project](http://clojars.org/to-jdbc-uri/latest-version.svg)](http://clojars.org/to-jdbc-uri)
+
 # to-jdbc-uri
 
 I notice that many templates and libraries out there expect a JDBC URI to connect to the database, but sometimes, that's
