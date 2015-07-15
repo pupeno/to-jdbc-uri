@@ -4,6 +4,20 @@
   (:require [clojure.test :refer :all]
             [to-jdbc-uri.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest to-jdbc-uri-test
+  (testing "Already JDBC URIs are left alone"
+    (is (= (to-jdbc-uri "jdbc:postgresql://hostname:3306/dbname?user=username&password=password")
+           "jdbc:postgresql://hostname:3306/dbname?user=username&password=password")))
+  (testing "Heroku-like PostgreSQL URI"                     ;; I think this is actually a generic PostgreSQL URL and not Heroku specific.
+    (is (= (to-jdbc-uri "postgres://username:password@hostname/dbname")
+           "jdbc:postgresql://hostname/dbname?user=username&password=password")))
+  (testing "Heroku-like PostgreSQL URI without username and password"
+    (is (= (to-jdbc-uri "postgres://hostname:1234/dbname")
+           "jdbc:postgresql://hostname:1234/dbname")))
+  (testing "Heroku-like PostgreSQL URI with port and username; no password"
+    (is (= (to-jdbc-uri "postgres://username@hostname:1234/dbname")
+           "jdbc:postgresql://hostname:1234/dbname?user=username")))
+  (testing "Heroku-like PostgreSQL URI with port, username and password"
+    (is (= (to-jdbc-uri "postgres://username:password@hostname:1234/dbname")
+           "jdbc:postgresql://hostname:1234/dbname?user=username&password=password"))))
+
