@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/carouselapps/to-jdbc-uri.svg?branch=master)](https://travis-ci.org/carouselapps/to-jdbc-uri)
-
 # to-jdbc-uri
+
+[![Build Status](https://travis-ci.org/carouselapps/to-jdbc-uri.svg?branch=master)](https://travis-ci.org/carouselapps/to-jdbc-uri)
 
 I notice that many templates and libraries out there expect a JDBC URI to connect to the database, but sometimes, that's
 not what you have. Sometimes what you have is the native URI of the database, like in the popular case of Heroku that
