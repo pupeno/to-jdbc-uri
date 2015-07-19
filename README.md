@@ -1,4 +1,4 @@
-[![Clojars Project](http://clojars.org/to-jdbc-uri/latest-version.svg)](http://clojars.org/to-jdbc-uri)
+[![Build Status](https://travis-ci.org/carouselapps/to-jdbc-uri.svg?branch=master)](https://travis-ci.org/carouselapps/to-jdbc-uri)
 
 # to-jdbc-uri
 
@@ -20,7 +20,7 @@ will grow to be the canonical way to get JDBC URIs.
 
 In your project.clj include the dependency:
 
-    [to-jdbc-uri "0.1.0"]
+[![Clojars Project](http://clojars.org/to-jdbc-uri/latest-version.svg)](http://clojars.org/to-jdbc-uri)
 
 and then call it like this:
 
