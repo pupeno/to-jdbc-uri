@@ -18,6 +18,8 @@
 (defn to-jdbc-uri
   "Convert a non-JDBC URI to a JDBC one."
   [uri]
+  (when (empty? uri)
+    (throw (Exception. "URI connection string cannot be empty!")))
   (if (.startsWith uri "jdbc")
     uri
     (let [parsed-uri (java.net.URI. uri)]
