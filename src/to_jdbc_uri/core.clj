@@ -3,30 +3,29 @@
 (ns to-jdbc-uri.core
   (:require [clojure.string :as s]))
 
-(defn- format-credentials [user-info]
+(defn- format-credentials [uri]
   (when user-info
-    (let [[username password] (s/split user-info #":")
-          user-and-pass
-          (->> [(when username (str "user=" username))
-                (when password (str "password=" password))]
-               (remove nil?)
-               (s/join "&")
-               (not-empty))]
-      (when-not (empty? user-and-pass)
+    (let [[username password] (s/split (.getUserInfo uri) #":")]
+      (when-let [user-and-pass
+                 (->> [(when username (str "user=" username))
+                       (when password (str "password=" password))]
+                      (remove nil?)
+                      (s/join "&")
+                      (not-empty))]
         (str "?" user-and-pass)))))
 
 (defn- port [port]
   (when-not (neg? port)
     port))
 
-(defn- host-and-port [host port]
-  (s/join ":" (remove nil? [host (port port)])))
+(defn- host-and-port [uri]
+  (s/join ":" (remove nil? [(.getHost uri) (port (.getPort uri))])))
 
 (defn- postgresql-to-jdbc-uri [uri]
   (str "jdbc:postgresql://"
-       (host-and-port (.getHost uri) (.getPort uri))
+       (host-and-port uri)
        (.getPath uri)
-       (format-credentials (.getUserInfo uri))))
+       (format-credentials uri)))
 
 (defn to-jdbc-uri
   "Convert a non-JDBC URI to a JDBC one."
