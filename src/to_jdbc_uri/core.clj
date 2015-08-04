@@ -1,10 +1,8 @@
-;;;; Copyright © 2015 Carousel Apps, Ltd
-
 (ns to-jdbc-uri.core
   (:require [clojure.string :as s]))
 
 (defn- format-credentials [uri]
-  (when user-info
+  (when (.getUserInfo uri)
     (let [[username password] (s/split (.getUserInfo uri) #":")]
       (when-let [user-and-pass
                  (->> [(when username (str "user=" username))
