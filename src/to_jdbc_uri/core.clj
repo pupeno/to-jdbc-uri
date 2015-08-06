@@ -1,3 +1,5 @@
+;;;; Copyright © 2015 Carousel Apps, Ltd
+
 (ns to-jdbc-uri.core
   (:require [clojure.string :as s]))
 
