@@ -19,5 +19,7 @@
            "jdbc:postgresql://hostname:1234/dbname?user=username")))
   (testing "Heroku-like PostgreSQL URI with port, username and password"
     (is (= (to-jdbc-uri "postgres://username:password@hostname:1234/dbname")
-           "jdbc:postgresql://hostname:1234/dbname?user=username&password=password"))))
-
+           "jdbc:postgresql://hostname:1234/dbname?user=username&password=password")))
+  (testing "Empty uri raises excetion"
+    (is (thrown? Exception (to-jdbc-uri "")))
+    (is (thrown? Exception (to-jdbc-uri nil)))))
