@@ -7,4 +7,6 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :lein-release {:deploy-via :clojars}
   :signing {:gpg-key "F2FB1C6F"}
-  :dependencies [[org.clojure/clojure "1.6.0"]])
+  :dependencies [[org.clojure/clojure "1.6.0"]]
+  :scm {:name "git"
+        :url "https://github.com/carouselapps/to-jdbc-uri"})
