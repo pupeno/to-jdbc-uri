@@ -2,19 +2,21 @@
 
 [![Build Status](https://travis-ci.org/carouselapps/to-jdbc-uri.svg?branch=master)](https://travis-ci.org/carouselapps/to-jdbc-uri)
 
-I notice that many templates and libraries out there expect a JDBC URI to connect to the database, but sometimes, that's
-not what you have. Sometimes what you have is the native URI of the database, like in the popular case of Heroku that
-gives you a PostgreSQL database. If you look for solutions to this problem you'll find lots of different code snippets
-that build a JDBC URI out of a PostgreSQL one, most with bugs and limitations. This little library intends to the
-solution to that.
+Many libraries starting with clojure.java.jdbc and libraries that use
+[clojure.java.jdbc](https://github.com/clojure/java.jdbc) internally expect a JDBC URI to connect to the database, but
+your environment might be giving you the database specs in a different format. This library is designed to take the
+database credentials in any format and, as long as it's possible, generate a valid JDBC URI. Currently supported:
 
-It's a very trivial library, so if you don't want to pull it into your project, you can copy and paste the function(s)
-that you want. It's still better to have a canonical solution to this problem than hundreds of little snippets floating
-around.
+- PostgreSQL (Heroku and others)
+- MySQL
 
-At the moment, this library is far for complete. It just deals with the PostgreSQL URIs Heroku gives you. In all other
-cases it'll throw an exception. For those cases, please, create an issue or a pull request and over time this library
-will grow to be the canonical way to get JDBC URIs.
+Support for other formats, databases, environments is welcome.
+
+The code in this library is actually trivial but if you need to perform this task and search for solutions you'll find
+lots of different snippets of code, some which work in some environments and not others. Even if you end up not using
+this library but copying and pasting
+[the code](https://github.com/carouselapps/to-jdbc-uri/blob/master/src/to_jdbc_uri/core.clj) it is better to have a
+canonical place for this code to exist.
 
 ## Usage
 
@@ -28,11 +30,26 @@ and then call it like this:
 
 for example:
 
-    (to-jdbc-uri.core/to-jdbc-uri "jdbc:postgresql://hostname:3306/dbname?user=username&password=password")
+    (to-jdbc-uri "postgres://username:password@hostname/dbname")
 
-For more examples, you might want to look into the tests, which are very simple.
+which will output:
 
-## Changelog
+    "jdbc:postgresql://hostname/dbname?user=username&password=password"
+
+It is safe to feed JDBC URIs to this library, they'll be left untouched. For more examples, you might want to look into
+[the tests](https://github.com/carouselapps/to-jdbc-uri/blob/master/test/to_jdbc_uri/core_test.clj), which are very
+simple.
+
+## Contributing
+
+To contribute:
+1. fork the project
+2. Add support for your favorite database/environment/format
+3. Add tests for the new code you wrote
+4. Make sure all tests pass, new and all
+5. Push, commit and send a pull request. Note how urgently you need a new release.
+
+## Change log
 
 ### v0.3.0 - 2015-08-24
 - Added support for MySQL.
