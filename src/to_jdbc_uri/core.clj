@@ -27,6 +27,12 @@
        (.getPath uri)
        (format-credentials uri)))
 
+(defn- mysql-to-jdbc-uri [uri]
+  (str "jdbc:mysql://"
+       (host-and-port uri)
+       (.getPath uri)
+       (format-credentials uri)))
+     
 (defn to-jdbc-uri
   "Convert a non-JDBC URI to a JDBC one."
   [uri]
@@ -37,4 +43,5 @@
     (let [parsed-uri (java.net.URI. uri)]
       (case (.getScheme parsed-uri)
         "postgres" (postgresql-to-jdbc-uri parsed-uri)
+        "mysql" (mysql-to-jdbc-uri parsed-uri)
         (throw (Exception. (str "Unsupported URI: " uri " please, submit an issue request and we'll try to add it. Pull requests also welcome")))))))
