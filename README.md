@@ -32,6 +32,18 @@ for example:
 
 For more examples, you might want to look into the tests, which are very simple.
 
+## Changelog
+
+### v0.3.0 - 2015-08-24
+- Added support for MySQL.
+
+### v0.2.0 - 2015-06-20
+- Raise an exception when the URI is empty or blank.
+- Started using Travis CI for continuous integration.
+
+### v0.1.0 - 2015-06-15
+- Initial version supporting PostgreSQL (at least on Heroku).
+
 ## License
 
 Copyright © 2015 Carousel Apps
