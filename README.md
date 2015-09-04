@@ -4,8 +4,9 @@
 
 Many libraries starting with clojure.java.jdbc and libraries that use
 [clojure.java.jdbc](https://github.com/clojure/java.jdbc) internally expect a JDBC URI to connect to the database, but
-your environment might be giving you the database specs in a different format. This library is designed to take the
-database credentials in any format and, as long as it's possible, generate a valid JDBC URI. Currently supported:
+your environment might be giving you the database specs in a different format.
+[to-jdbc-uri](https://carouselapps.com/to-jdbc-uri/) is designed to take the database credentials in any format and, as
+long as it's possible, generate a valid JDBC URI. Currently supported:
 
 - PostgreSQL (Heroku and others)
 - MySQL

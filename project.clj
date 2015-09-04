@@ -2,7 +2,7 @@
 
 (defproject com.carouselapps/to-jdbc-uri "0.3.0"
   :description "Simple function to convert non-JDBC URIs into JDBC ones"
-  :url "https://github.com/carouselapps/to-jdbc-uri"
+  :url "https://carouselapps.com/to-jdbc-uri/"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :lein-release {:deploy-via :clojars}
