@@ -64,6 +64,6 @@ To contribute:
 
 ## License
 
-Copyright © 2015 Carousel Apps
+Copyright © 2015 Carousel Apps, Ltd. All rights reserved.
 
 Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
