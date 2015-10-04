@@ -1,5 +1,7 @@
 # to-jdbc-uri
 
+[![Join the chat at https://gitter.im/carouselapps/to-jdbc-uri](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/carouselapps/to-jdbc-uri?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/carouselapps/to-jdbc-uri.svg?branch=master)](https://travis-ci.org/carouselapps/to-jdbc-uri)
 
 Many libraries starting with clojure.java.jdbc and libraries that use
