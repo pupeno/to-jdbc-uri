@@ -59,8 +59,12 @@ To contribute:
 
 ## Change log
 
+### v0.4.0 - 2015-11-03
+- Added support for RedHat OpenShift PostgreSQL URLs. Courtesy of [Pradnyesh Sawant](https://github.com/spradnyesh).
+- Moved jar to the com.carouselapps group.
+
 ### v0.3.0 - 2015-08-24
-- Added support for MySQL.
+- Added support for MySQL. Courtesy of [Joe Kutner](https://github.com/jkutner).
 
 ### v0.2.0 - 2015-06-20
 - Raise an exception when the URI is empty or blank.
