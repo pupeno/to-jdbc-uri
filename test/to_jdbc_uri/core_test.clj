@@ -20,6 +20,9 @@
   (testing "Heroku-like PostgreSQL URI with port, username and password"
     (is (= (to-jdbc-uri "postgres://username:password@hostname:1234/dbname")
            "jdbc:postgresql://hostname:1234/dbname?user=username&password=password")))
+  (testing "RedHat OpenShift-like PostgreSQL URI with port, username and password"
+    (is (= (to-jdbc-uri "postgresql://username:password@hostname:1234/dbname")
+           "jdbc:postgresql://hostname:1234/dbname?user=username&password=password")))
   (testing "Heroku-like MySQL URI with port, username and password"
     (is (= (to-jdbc-uri "mysql://username:password@hostname:1234/dbname")
            "jdbc:mysql://hostname:1234/dbname?user=username&password=password")))
