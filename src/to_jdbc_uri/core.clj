@@ -36,6 +36,6 @@
     uri
     (let [parsed-uri (java.net.URI. uri)]
       (case (.getScheme parsed-uri)
-        (or "postgres" "postgresql") (format-jdbc-uri parsed-uri "postgresql") ; Heroku uses postgres://, RedHat OpenShift uses postgresql://
+        ("postgres" "postgresql") (format-jdbc-uri parsed-uri "postgresql") ; Heroku uses postgres://, RedHat OpenShift uses postgresql://
         "mysql" (format-jdbc-uri parsed-uri "mysql")
         (throw (Exception. (str "Unsupported URI: " uri " please, submit an issue request and we'll try to add it. Pull requests also welcome")))))))
