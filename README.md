@@ -59,6 +59,9 @@ To contribute:
 
 ## Change log
 
+### v0.4.1 - 2015-11-03
+- Corrected syntax for case when selected for PostgreSQL.
+
 ### v0.4.0 - 2015-11-03
 - Added support for RedHat OpenShift PostgreSQL URLs. Courtesy of [Pradnyesh Sawant](https://github.com/spradnyesh).
 - Moved jar to the com.carouselapps group.
