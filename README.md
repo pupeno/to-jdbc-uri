@@ -10,7 +10,7 @@ your environment might be giving you the database specs in a different format.
 [to-jdbc-uri](https://carouselapps.com/to-jdbc-uri/) is designed to take the database credentials in any format and, as
 long as it's possible, generate a valid JDBC URI. Currently supported:
 
-- PostgreSQL (Heroku and others)
+- PostgreSQL (Heroku, RedHat OpenShift and others)
 - MySQL
 
 Support for other formats, databases, environments is welcome.
