@@ -45,7 +45,7 @@ simple.
 
 Note: to-jdbc-uri up to version 0.3.0 was not in the com.carouselapps group, from 0.4.0 it'll be in the
 com.carouselapps groups. If you are using this jar, you can and should switch from ```[to-jdbc-uri "0.3.0"]``` to
-```[com.carouselapps/to-jdbc-uri "0.4.0"]```
+```[com.carouselapps/to-jdbc-uri "0.4.1"]``` or the latest version.
 
 ## Contributing
 
