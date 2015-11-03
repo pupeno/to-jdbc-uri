@@ -25,7 +25,7 @@ canonical place for this code to exist.
 
 In your project.clj include the dependency:
 
-[![Clojars Project](http://clojars.org/to-jdbc-uri/latest-version.svg)](http://clojars.org/to-jdbc-uri)
+[![Clojars Project](http://clojars.org/com.carouselapps/to-jdbc-uri/latest-version.svg)](http://clojars.org/com.carouselapps/to-jdbc-uri)
 
 and then call it like this:
 
@@ -42,6 +42,10 @@ which will output:
 It is safe to feed JDBC URIs to this library, they'll be left untouched. For more examples, you might want to look into
 [the tests](https://github.com/carouselapps/to-jdbc-uri/blob/master/test/to_jdbc_uri/core_test.clj), which are very
 simple.
+
+Note: to-jdbc-uri up to version 0.3.0 was not in the com.carouselapps group, from 0.4.0 it'll be in the
+com.carouselapps groups. If you are using this jar, you can and should switch from ```[to-jdbc-uri "0.3.0"]``` to
+```[com.carouselapps/to-jdbc-uri "0.4.0"]```
 
 ## Contributing
 
