@@ -52,10 +52,10 @@ com.carouselapps groups. If you are using this jar, you can and should switch fr
 
 To contribute:
 
-1. fork the project
-2. Add support for your favorite database/environment/format
-3. Add tests for the new code you wrote
-4. Make sure all tests pass, new and all
+1. fork the project.
+2. Add support for your favorite database/environment/format/feature.
+3. Add tests for the new code you wrote.
+4. Make sure all tests pass, new and all.
 5. Push, commit and send a pull request. Note how urgently you need a new release.
 
 ## Change log
