@@ -1,8 +1,9 @@
 # to-jdbc-uri
 
-[![Join the chat at https://gitter.im/carouselapps/to-jdbc-uri](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/carouselapps/to-jdbc-uri?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
+[![Code at GitHub](https://img.shields.io/badge/code-github-green.svg)](https://github.com/carouselapps/to-jdbc-uri)
+[![Clojars](https://img.shields.io/clojars/v/com.carouselapps/to-jdbc-uri.svg)](https://clojars.org/com.carouselapps/to-jdbc-uri)
 [![Build Status](https://travis-ci.org/carouselapps/to-jdbc-uri.svg?branch=master)](https://travis-ci.org/carouselapps/to-jdbc-uri)
+[![Join the chat at https://gitter.im/carouselapps/to-jdbc-uri](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/carouselapps/to-jdbc-uri?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Many libraries starting with clojure.java.jdbc and libraries that use
 [clojure.java.jdbc](https://github.com/clojure/java.jdbc) internally expect a JDBC URI to connect to the database, but
