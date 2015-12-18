@@ -59,6 +59,9 @@ To contribute:
 
 ## Change log
 
+### Next version
+- [Support URL parameters. Courtesy of Joe Kutner](https://github.com/carouselapps/to-jdbc-uri/pull/6)
+
 ### v0.4.1 - 2015-11-03
 - Corrected syntax for case when selected for PostgreSQL.
 
