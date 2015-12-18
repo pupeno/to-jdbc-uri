@@ -60,17 +60,17 @@ To contribute:
 ## Change log
 
 ### Next version
-- [Support URL parameters. Courtesy of Joe Kutner](https://github.com/carouselapps/to-jdbc-uri/pull/6)
+- [Support URL parameters](https://github.com/carouselapps/to-jdbc-uri/pull/6). Courtesy of [Joe Kutner](https://github.com/jkutner)
 
 ### v0.4.1 - 2015-11-03
 - Corrected syntax for case when selected for PostgreSQL.
 
 ### v0.4.0 - 2015-11-03
-- Added support for RedHat OpenShift PostgreSQL URLs. Courtesy of [Pradnyesh Sawant](https://github.com/spradnyesh).
+- [Added support for RedHat OpenShift PostgreSQL URLs](https://github.com/carouselapps/to-jdbc-uri/pull/5). Courtesy of [Pradnyesh Sawant](https://github.com/spradnyesh).
 - Moved jar to the com.carouselapps group.
 
 ### v0.3.0 - 2015-08-24
-- Added support for MySQL. Courtesy of [Joe Kutner](https://github.com/jkutner).
+- [Added support for MySQL](https://github.com/carouselapps/to-jdbc-uri/pull/3). Courtesy of [Joe Kutner](https://github.com/jkutner).
 
 ### v0.2.0 - 2015-06-20
 - Raise an exception when the URI is empty or blank.
