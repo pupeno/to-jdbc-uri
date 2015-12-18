@@ -14,6 +14,10 @@
                       (not-empty))]
         (str "?" user-and-pass)))))
 
+(defn- format-query [uri sep-char]
+  (when-let [raw-query (.getRawQuery uri)]
+    (str sep-char raw-query)))
+
 (defn- port [port]
   (when-not (neg? port)
     port))
@@ -25,7 +29,9 @@
   (str "jdbc:" db "://"
        (host-and-port uri)
        (.getPath uri)
-       (format-credentials uri)))
+       (if-let [credentials (format-credentials uri)]
+         (str credentials (format-query uri "&"))
+         (format-query uri "?"))))
 
 (defn to-jdbc-uri
   "Convert a non-JDBC URI to a JDBC one."
