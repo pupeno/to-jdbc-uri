@@ -1,6 +1,6 @@
 ;;;; Copyright © 2015 Carousel Apps, Ltd
 
-(defproject com.carouselapps/to-jdbc-uri "0.5.0-SNAPSHOT"
+(defproject com.carouselapps/to-jdbc-uri "0.5.0"
   :description "Simple function to convert non-JDBC URIs into JDBC ones"
   :url "https://carouselapps.com/to-jdbc-uri/"
   :license {:name "Eclipse Public License"
