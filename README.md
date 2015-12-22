@@ -24,21 +24,27 @@ canonical place for this code to exist.
 
 ## Usage
 
-In your project.clj include the dependency:
+In your ```project.clj``` include the dependency:
 
 [![Clojars Project](http://clojars.org/com.carouselapps/to-jdbc-uri/latest-version.svg)](http://clojars.org/com.carouselapps/to-jdbc-uri)
 
 and then call it like this:
 
-    (to-jdbc-uri.core/to-jdbc-uri your-non-jdbc-url)
+```clojure
+(to-jdbc-uri.core/to-jdbc-uri your-non-jdbc-url)
+````
 
 for example:
 
-    (to-jdbc-uri "postgres://username:password@hostname/dbname")
+```clojure
+(to-jdbc-uri "postgres://username:password@hostname/dbname")
+```
 
 which will output:
 
-    "jdbc:postgresql://hostname/dbname?user=username&password=password"
+```clojure
+"jdbc:postgresql://hostname/dbname?user=username&password=password"
+```
 
 It is safe to feed JDBC URIs to this library, they'll be left untouched. For more examples, you might want to look into
 [the tests](https://github.com/carouselapps/to-jdbc-uri/blob/master/test/to_jdbc_uri/core_test.clj), which are very
