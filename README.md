@@ -66,7 +66,7 @@ To contribute:
 
 ## Change log
 
-### Next version
+### v0.5.0 - 2015-12-22
 - [Support URL parameters](https://github.com/carouselapps/to-jdbc-uri/pull/6). Courtesy of [Joe Kutner](https://github.com/jkutner)
 
 ### v0.4.1 - 2015-11-03
